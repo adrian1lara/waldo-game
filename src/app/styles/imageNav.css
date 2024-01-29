@@ -1,0 +1,8 @@
+.image-box {
+    margin: 0 auto;
+    width: 200px;
+    height: 150px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
