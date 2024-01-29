@@ -1,8 +1,12 @@
+import GameBoard from "./components/gameBoard";
+import ImageNav from "./components/imageNav";
 
 export default function Home() {
   return (
     <div>
-      <h1>Hello world</h1>
+      <ImageNav />
+      <h1>Find Waldo</h1>
+      <GameBoard />
     </div>
   );
 }
