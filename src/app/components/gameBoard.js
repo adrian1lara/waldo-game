@@ -7,23 +7,27 @@ import { useRouter } from "next/navigation";
 
 export default function GameBoard() {
     const [waldoClicked, setWaldoClicked] = useState(false)
+    const [clicks, setClicks] = useState(0)
     const [gameResult, setGameResult ] = useState(false)
     const router = useRouter()
 
-    const handleClickWaldo = () => {
+    const handleClickWaldo = () => {  
         setWaldoClicked(true)
         setGameResult(true)
+        setClicks((prevClick) => prevClick + 1)
         console.log("found")
     }
 
     const handleClickAnyWhere = () => {
         setWaldoClicked(false)
         setGameResult(false)
-        console.log("try again")
+        setClicks((prevClick) => prevClick + 1)
+        console.log("try again " + clicks )
     }
 
     useEffect(() => {
         if(gameResult) {
+            localStorage.setItem("nClicks", clicks)
             router.push("/submit")
         }
     })
