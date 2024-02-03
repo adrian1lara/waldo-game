@@ -5,7 +5,9 @@ import "../styles/imageNav.css"
 export default function ImageNav() {
     return (
         <div>
+            <h1>Find Me!</h1>
         <div className="image-box">
+            
             <Image 
             src={waldo}
             height={150}
