@@ -1,6 +1,5 @@
-import GameBoard from "./components/gameBoard";
-import ImageNav from "./components/imageNav";
-import Timer from "./components/timer";
+
+import LeaderBoard from "./components/leaderboard";
 import "./styles/global.css"
 
 export default function Home() {
@@ -13,7 +12,7 @@ export default function Home() {
           </h1>
         </aside>
         <section>
-          <h1>leaderboard</h1>
+          <LeaderBoard />
         </section>
       </main>
     </div>
