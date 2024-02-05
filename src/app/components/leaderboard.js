@@ -1,5 +1,6 @@
 'use client'
 import { useEffect, useState } from "react"
+import "../styles/global.css"
 
 export default function LeaderBoard() {
 
@@ -33,8 +34,9 @@ export default function LeaderBoard() {
       <h2>LeaderBoard</h2>
       {leaderboard ? (
         <div>
-          {leaderboard.map((leader) => (
+          {leaderboard.map((leader, index) => (
             <div key={leader._id}>
+            <p className="text-3xl">{index + 1}</p>
               <p>{leader.name}</p>
               <p>{leader.timer}</p>
               <p>{leader.clicks}</p>
