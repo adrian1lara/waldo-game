@@ -36,7 +36,6 @@ export default function LeaderBoard() {
 
     return(
         <div>
-            <h2>Leaderboard</h2>
         <table className="min-w-full text-left text-sm font-light">
             
             <thead className="border-b font-medium dark:border-neutral-500">
