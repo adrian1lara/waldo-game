@@ -1,5 +1,5 @@
 "use client"
-import { redirect, useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import "../styles/global.css"
 import { useEffect, useState } from "react"
 
@@ -8,6 +8,7 @@ export default function LeaderBoardForm() {
     const [error, setError] = useState(null)
     const [name, setName] = useState("")
     const [time, setTime] = useState("")
+    const router = useRouter()
 
     useEffect(() => {
         setTime(localStorage.getItem("timeRecord"))
@@ -31,7 +32,7 @@ export default function LeaderBoardForm() {
             })
 
             if(response.ok) {
-
+                router.push("/")
             } else {
                 const errorRes = await response.json()
                 setError(errorRes.message || "An error occurred")
