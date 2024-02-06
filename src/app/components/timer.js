@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import "../styles/global.css"
 
 export default function Timer() {
 
@@ -30,9 +31,11 @@ export default function Timer() {
       };
 
     return (
-        <div>
-            <h3>Timer</h3>
-            <p>{formatTime(seconds)}</p>
+        <div >
+            <div className=" bg-yellow-500 mt-2 p-2 border-2 rounded-xl fixed">
+            <h3 className="text-lg">Timer:</h3>
+            <p className="text-lg">{formatTime(seconds)}</p>
+            </div>
         </div>
     )
 }
