@@ -3,6 +3,7 @@ import Image from "next/image";
 import wallpaper from "../assets/WaldoBanner.jpg"
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import "../styles/global.css"
 
 
 export default function GameBoard() {
@@ -36,8 +37,8 @@ export default function GameBoard() {
 
     return (
         <div>
-            <div id="waldoPos" style={{ position: "relative",left: "1169px",
-        top: "370px", width: "34px", height:"40px",  border: "1px solid black"}}
+            <div id="waldoPos" style={{ position: "relative",left: "890px",
+        top: "287px", width: "30px", height:"39px",  border: "1px solid black"}}
         onClick={handleClickWaldo}
         >
             
