@@ -1,4 +1,5 @@
 
+import FirstLevel from "./components/firstGame";
 import LeaderBoard from "./components/leaderboard";
 import "./styles/global.css"
 
@@ -10,6 +11,7 @@ export default function Home() {
           <h1>
             Games
           </h1>
+          <FirstLevel />
         </aside>
         <section>
           <LeaderBoard />
